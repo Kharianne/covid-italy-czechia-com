@@ -4,6 +4,7 @@ compare it with the worst hit country in Europe - Italy.
 Time series start at day 0: 
 - First day in given country when first case was confirmed 
 - First day in given country when first death was confirmed
+
 Thanks to this time alternation, we can see progress from first death
 and confirmed case as the outbreak would started in both countries in the
 same day.
