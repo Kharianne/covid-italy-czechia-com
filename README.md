@@ -2,6 +2,8 @@
 
 ![](https://github.com/Kharianne/covid-italy-czechia-com/workflows/Up%20to%20date/badge.svg)
 
+[You can see all graphs here!](italy-czechia_time_zero_comparison.ipynb)
+
 I wanted to track progress of COVID-19 in my home country - Czechia and 
 compare it with the worst hit country in Europe - Italy. 
 Time series start at day 0: 
