@@ -1,3 +1,5 @@
-COVID-19
-.ipynb_checkpoints
-confirmed_global.csv
+/.idea
+/.ipynb_checkpoints
+/confirmed_global.csv
+/italy-czechia_time_zero_comparison.ipynb
+/test
