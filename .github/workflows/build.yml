@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Up to date
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -59,6 +59,10 @@ jobs:
 
         git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
         git pull github "$GITHUB_REF" --ff-only
+
+        if ! git diff --cached --exit-code; then
+          exit 0
+        fi
 
         git add COVID-19
         git add italy-czechia_time_zero_comparison.ipynb
