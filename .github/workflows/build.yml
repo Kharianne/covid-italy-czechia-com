@@ -35,7 +35,7 @@ jobs:
         sudo apt-get update -y
         sudo apt-get install -y npm
 
-        npm install -g electron@6.1.4 orca
+        sudo npm install -g electron@6.1.4 orca
 
     - name: Update data
       run: |
