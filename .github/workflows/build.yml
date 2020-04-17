@@ -29,3 +29,14 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+
+    - name: Test commit back to the repo
+      run: |
+        git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+        git pull github "$GITHUB_REF" --ff-only
+
+        touch foo
+        git add foo
+
+        git commit -m "Add foo"
+        git push github "HEAD:$GITHUB_REF"
