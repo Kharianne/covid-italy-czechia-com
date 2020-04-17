@@ -29,13 +29,15 @@ jobs:
 
     - name: Install dependencies
       run: |
+        set -x
+
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
         sudo apt-get update -y
         sudo apt-get install -y npm
 
-        sudo npm install -g electron@6.1.4 orca
+        sudo npm install -g electron@6.1.4 --unsafe-perm=true --allow-root orca
 
     - name: Update data
       run: |
