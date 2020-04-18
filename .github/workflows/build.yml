@@ -46,7 +46,8 @@ jobs:
     - name: Update data
       run: |
         cd COVID-19
-        git pull
+        git checkout master
+        git pull origin master
 
     # Runs a set of commands using the runners shell
     - name: Generate output file
