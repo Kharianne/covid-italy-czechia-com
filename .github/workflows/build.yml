@@ -34,11 +34,7 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: "3.8"
-
-    - name: Accept EULA
-      run: |
-        sudo env ACCEPT_EULA=Y apt-get install msodbcsql17
-      
+     
     - name: Install dependencies
       run: |
         set -x
@@ -46,9 +42,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-        sudo apt-get update -y
-        sudo apt-get upgrade -y
-        sudo apt-get install -y npm
+        sudo ACCEPT_EULA=Y apt-get update -y
+        sudo ACCEPT_EULA=Y apt-get upgrade -y
+        sudo ACCEPT_EULA=Y apt-get install -y npm
 
         sudo npm install -g electron@6.1.4 --unsafe-perm=true --allow-root orca
 
