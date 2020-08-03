@@ -35,6 +35,10 @@ jobs:
       with:
         python-version: "3.8"
 
+    - name: Accept EULA
+      run: |
+        export ACCEPT_EULA=Y
+      
     - name: Install dependencies
       run: |
         set -x
