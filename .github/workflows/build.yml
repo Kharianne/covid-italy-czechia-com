@@ -43,7 +43,7 @@ jobs:
         pip install -r requirements.txt
 
         sudo ACCEPT_EULA=Y apt-get update -y
-        sudo ACCEPT_EULA=Y apt-get upgrade -y
+        sudo ACCEPT_EULA=Y apt-get upgrade -y -o Dpkg::Options::="--force-overwrite"
         sudo ACCEPT_EULA=Y apt-get install -y npm
 
         sudo npm install -g electron@6.1.4 --unsafe-perm=true --allow-root orca
