@@ -43,6 +43,7 @@ jobs:
         pip install -r requirements.txt
         
         # sudo apt-get purge grub\*
+        sudo apt-mark hold grub-efi-amd64-signed
         sudo ACCEPT_EULA=Y apt-get update -y
         sudo ACCEPT_EULA=Y apt-get upgrade -y # -o Dpkg::Options::="--force-overwrite"
         sudo ACCEPT_EULA=Y apt-get install -y npm
