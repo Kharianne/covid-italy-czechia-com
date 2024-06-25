@@ -37,7 +37,8 @@ jobs:
         run: |
           set -x
           
-          python -m pip install --upgrade pip
+          python -m pip install --upgrade pip ipython ipykernel
+          ipython kernel install --name "python3" --user
           pip install -r requirements.txt
           
           # sudo apt-get purge grub\*
