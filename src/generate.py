@@ -5,14 +5,14 @@ Inspired by: https://ogden.eu/run-notebooks
 Thanks!
 """
 
-import nbformat
 import sys
+
+import nbformat
 from nbconvert.preprocessors import ExecutePreprocessor
 from nbconvert.preprocessors.execute import CellExecutionError
 
 OUT_FILE = "italy-czechia_time_zero_comparison.ipynb"
 SRC_FILE = f"src/{OUT_FILE}"
-
 
 with open(SRC_FILE) as f:
     nb = nbformat.read(f, as_version=4)
